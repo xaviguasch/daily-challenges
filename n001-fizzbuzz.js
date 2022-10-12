@@ -3,9 +3,19 @@
 // Hint: Loop with conditionals that use modulus
 
 const fizzBuzz = (number) => {
-  return
+  for (let i = 1; i <= number; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log('Fizz Buzz')
+    } else if (i % 5 === 0) {
+      console.log('Buzz')
+    } else if (i % 3 === 0) {
+      console.log('Fizz')
+    } else {
+      console.log(i)
+    }
+  }
 }
 
-console.log(fizzBuzz(5))
-console.log(fizzBuzz(16))
-console.log(fizzBuzz(28))
+// console.log(fizzBuzz(5))
+// console.log(fizzBuzz(16))
+console.log(fizzBuzz(33))
