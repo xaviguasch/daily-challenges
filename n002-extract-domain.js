@@ -5,7 +5,11 @@
 // domainName("https://www.cnet.com") == "cnet
 
 const extractDomain = (domain) => {
-  return
+  return domain
+    .replace('https://', '')
+    .replace('http://', '')
+    .replace('www.', '')
+    .split('.')[0]
 }
 
 console.log(extractDomain('http://github.com/carbonfive/raygun'))
