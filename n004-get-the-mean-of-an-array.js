@@ -4,9 +4,8 @@
 
 // The array will never be empty.
 
-const getAverage = (marks) => {
-  return
-}
+const getAverage = (marks) =>
+  Math.floor(marks.reduce((acc, currV) => acc + currV) / marks.length)
 
 console.log(getAverage([2, 2, 2, 2]))
 console.log(getAverage([1, 2, 3, 4, 5]))
