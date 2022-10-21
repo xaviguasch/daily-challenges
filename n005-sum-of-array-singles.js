@@ -7,7 +7,9 @@
 // Good luck!
 
 const repeats = (arr) => {
-  return
+  return arr
+    .filter((n) => arr.indexOf(n) === arr.lastIndexOf(n))
+    .reduce((acc, currV) => acc + currV, 0)
 }
 
 console.log(repeats([4, 5, 7, 5, 4, 8]))
