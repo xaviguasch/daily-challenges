@@ -9,7 +9,7 @@
 // Good luck!
 
 const solve = (arr) => {
-  return 0
+  return arr.map((subArr) => new Set(subArr).size).reduce((acc, currV) => acc * currV, 1)
 }
 
 console.log(solve([[1, 2], [4], [5, 6]]))
