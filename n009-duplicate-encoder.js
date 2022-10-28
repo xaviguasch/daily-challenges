@@ -9,7 +9,13 @@
 // Assertion messages may be unclear about what they display in some languages. If you read "...It Should encode XXX", the "XXX" is the expected result, not the input!
 
 const duplicateEncode = (word) => {
-  return
+  return word
+    .toLowerCase()
+    .split('')
+    .map((letter, idx, arr) =>
+      arr.indexOf(letter) === arr.lastIndexOf(letter) ? '(' : ')'
+    )
+    .join('')
 }
 
 console.log(duplicateEncode('din'))
