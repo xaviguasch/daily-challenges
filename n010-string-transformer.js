@@ -11,7 +11,13 @@
 // You may assume the input only contain English alphabet and spaces.
 
 const stringTransformer = (str) => {
-  return
+  return str
+    .split(' ')
+    .reverse()
+    .join(' ')
+    .split('')
+    .map((l) => (l === l.toUpperCase() ? l.toLowerCase() : l.toUpperCase()))
+    .join('')
 }
 
 console.log(stringTransformer('Example string'))
