@@ -10,7 +10,14 @@
 // Note: N may be 1 or less (in the latter case, the first array will be []).
 
 const findDeletedNumber = (arr, mixArr) => {
-  return
+  if (arr.length === mixArr.length) {
+    return 0
+  } else {
+    let arrSum = arr.reduce((acc, currV) => acc + currV, 0)
+    let mixSum = mixArr.reduce((acc, currV) => acc + currV, 0)
+
+    return arrSum - mixSum
+  }
 }
 
 console.log(findDeletedNumber([1, 2, 3, 4, 5], [3, 4, 1, 5]))
