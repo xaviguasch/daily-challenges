@@ -18,6 +18,9 @@ const findDeletedNumber = (arr, mixArr) => {
 
     return arrSum - mixSum
   }
+
+  // less optimal solution
+  // return arr.filter((n) => mixArr.indexOf(n) === -1)[0] || 0
 }
 
 console.log(findDeletedNumber([1, 2, 3, 4, 5], [3, 4, 1, 5]))
