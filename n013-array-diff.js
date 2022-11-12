@@ -8,7 +8,10 @@
 // arrayDiff([1,2,2,2,3],[2]) == [1,3]
 
 const arrayDiff = (a, b) => {
-  return
+  // if (a.length === 0 || b.length === 0) return a
+
+  let newSet = new Set(b)
+  return a.filter((n) => !newSet.has(n))
 }
 
 console.log(arrayDiff([1, 2], [1]))
