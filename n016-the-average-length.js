@@ -9,8 +9,10 @@
 // If the average length is not an integer, use Math.round().
 // The input array's length > 1
 
-const averageLength = () => {
-  return
+const averageLength = (arr) => {
+  const avgLength = Math.round(arr.join('').length / arr.length)
+
+  return arr.map((str) => str[0].repeat(avgLength))
 }
 
 console.log(averageLength(['u', 'y']))
