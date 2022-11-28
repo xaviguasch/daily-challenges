@@ -4,8 +4,9 @@
 
 // --> "alpha beta gamma delta alpha beta gamma delta"
 
-const removeConsecutiveDuplicates = () => {
-  return
+const removeConsecutiveDuplicates = (str) => {
+  const newArr = str.split(' ')
+  return newArr.filter((word, idx) => word !== newArr[idx + 1]).join(' ')
 }
 
 console.log(
