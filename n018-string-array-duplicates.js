@@ -11,7 +11,12 @@
 // Good luck!
 
 const dup = (s) => {
-  return
+  return s.map((word) =>
+    word
+      .split('')
+      .filter((letter, idx, word) => letter !== word[idx + 1])
+      .join('')
+  )
 }
 
 console.log(dup(['ccooddddddewwwaaaaarrrrsssss', 'piccaninny', 'hubbubbubboo']))
