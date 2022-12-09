@@ -11,8 +11,20 @@
 
 // fizzbuzz(3) -->  [1, 2, "Fizz"]
 
-const fizzbuzz = (n) => {
-  return
+const fizzbuzz = (num) => {
+  // %2 -> fizz; %3 -> buzz; 2%&&%3 -> fizzBuzz; num
+  for (let i = 1; i <= num; i++) {
+    if (i % 6 === 0) {
+      console.log('FizzBuzz')
+    } else if (i % 2 === 0) {
+      console.log('Fizz')
+    } else if (i % 3 === 0) {
+      console.log('Buzz')
+    } else {
+      console.log(i)
+    }
+  }
 }
 
-console.log(fizzbuzz(24))
+console.log(fizzbuzz(6))
+console.log(fizzbuzz(8))
