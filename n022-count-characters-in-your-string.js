@@ -2,10 +2,21 @@
 
 // What if the string is empty? Then the result should be empty object literal, {}.
 
-const count = (string) => {
-  return
+const count = (str) => {
+  //create obj
+  let countObj = {}
+  //loop -> check val exist ? val++ : val-1
+  for (const c of str) {
+    if (countObj[c]) {
+      countObj[c]++
+    } else {
+      countObj[c] = 1
+    }
+  }
+
+  return countObj
 }
 
 console.log(count('aba'))
 console.log(count('malignant'))
-console.log(count(''))
+console.log(count('abba'))
