@@ -21,7 +21,19 @@
 // All the characters of jewels are unique.
 
 const numJewelsInStones = (jewels, stones) => {
-  return
+  const map = {}
+  let count = 0
+
+  for (const jewel of jewels) {
+    map[jewel] = true
+  }
+
+  for (const stone of stones) {
+    if (map[stone]) {
+      count++
+    }
+  }
+  return count
 }
 
 console.log(numJewelsInStones('aA', 'aAAbbbb'))
