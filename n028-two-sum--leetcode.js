@@ -19,7 +19,14 @@
 // Output: [0,1]
 
 const twoSum = (nums, target) => {
-  return
+  // brute force solution
+  for (let i = 0; i <= nums.length - 1; i++) {
+    for (let y = i + 1; y <= nums.length - 1; y++) {
+      if (nums[i] + nums[y] === target) {
+        return [i, y]
+      }
+    }
+  }
 }
 
 console.log(twoSum([2, 7, 11, 15], 9)) // Output: [0,1]
