@@ -11,8 +11,27 @@
 // Input: nums = [2,2,1,1,1,2,2]
 // Output: 2
 
-const majorityElement = (nums) => {
-  return
+const majorityElement = (arr) => {
+  // arr.sort()
+  // return arr[Math.floor(arr.length/2)]
+
+  let elem = {},
+    count = 0,
+    majElem = arr[0]
+
+  for (const num of arr) {
+    elem[num] = elem[num] + 1 || 1
+    //elem[num] > arr.length / 2
+  }
+
+  for (const n in elem) {
+    if (elem[n] > count) {
+      count = elem[n]
+      majElem = n
+    }
+  }
+
+  return majElem
 }
 
 console.log(majorityElement([3, 2, 3]))
