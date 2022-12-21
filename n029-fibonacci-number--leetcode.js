@@ -25,9 +25,15 @@
 // 0 <= n <= 30
 
 const fib = (n) => {
-  return
+  let arr = [0, 1]
+  for (let i = 2; i <= n; i++) {
+    arr[i] = arr[i - 1] + arr[i - 2]
+  }
+  console.log(arr)
+  return arr[n]
 }
 
 console.log(fib(2))
 console.log(fib(3))
 console.log(fib(4))
+console.log(fib(8))
